@@ -1,0 +1,36 @@
+.sweet-alert {
+  border-radius : 0;
+
+  .sa-input-error.show {
+    display: none !important;
+  }
+
+  button {
+    border-radius: 0;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: none !important;
+  }
+
+  button.cancel {
+    background-color: $btn-sa-cancel;
+  }
+
+  button.confirm {
+    background-color: $btn-danger !important;
+  }
+
+}
+
+.sweet-alert.confirm-secondary {
+  button.confirm {
+    background-color: $btn-secondary !important;
+  }
+}
+
+.sweet-alert.confirm-danger {
+  button.confirm {
+    background-color: $btn-danger !important;
+  }
+}

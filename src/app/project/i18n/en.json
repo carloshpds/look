@@ -1,0 +1,32 @@
+{
+  "GENERAL" : {
+    "NEW" : "New",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "EDIT" : "Edit",
+    "PROPERTY_TYPES": {
+      "TEXT": "Text",
+      "NUMBER": "Number",
+      "MULTI": "Multi selection list",
+      "LIST": "List",
+      "RELATED_LIST": "Related list",
+      "DATE": "Date",
+      "CURRENCY": "Currency"
+
+    },
+
+    "BOOLEAN": {
+      "TRUE": "Yes",
+      "True" : "@:GENERAL.BOOLEAN.TRUE",
+      "true" : "@:GENERAL.BOOLEAN.TRUE",
+      "FALSE": "No",
+      "False" : "@:GENERAL.BOOLEAN.false",
+      "false" : "@:GENERAL.BOOLEAN.false"
+    },
+
+    "DELETE" : "Delete",
+    "REMOVE" : "Remove",
+
+    "NAME" : "Name"
+  }
+}

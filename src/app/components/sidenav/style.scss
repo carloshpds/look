@@ -1,0 +1,84 @@
+.sidenav {
+  width: 275px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 1px;
+  min-height: 100%;
+  background-color: $primary-color;
+  color: $secondary-color;
+
+  .header {
+    height: 50px;
+    width: 210px;
+    margin: 37px auto;
+
+    .icon-adm-logo {
+      float: left;
+      font-size: 51px;
+      margin-right: 14px;
+    }
+
+    .title {
+      font-size: 21px;
+      float: left;
+      font-weight: 200;
+    }
+
+    .company {
+      font-size: 16px;
+      float: left;
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+      font-weight: 200;
+    }
+  }
+
+  .features {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      cursor: pointer;
+      font-weight: 300;
+
+       a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0px 28px;
+        display: block;
+        line-height: 40px;
+       }
+
+       .icon {
+        padding-right: 8px;
+        font-size: 16px;
+       }
+
+      &.active {
+        background-color: $selected-item-bg-color;
+      }
+    }
+  }
+
+  // Admin Icons
+  span[class*="icon-adm-"] {
+    color: #FFFFFF;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .sidenav {
+    display: none;
+  }
+}
+
+
+
+
+
+

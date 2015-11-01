@@ -1,0 +1,17 @@
+<div class="sidenav" role="navigation">
+  <div class="header">
+    <span class="icon-adm-logo"></span>
+    <span class='title' ng-bind="'SIDENAV.HEADER' | translate"></span>
+  </div>
+
+  <div class="features">
+    <ul>
+      <li ui-sref-active="active" class='feature' ng-repeat="feature in attrs.features track by $index">
+        <a ui-sref="{{feature.route}}" ui-sref-opts="{reload: true}">
+          <span class='icon' ng-class='feature.icon'></span>
+          <span ng-bind="feature.name | translate"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

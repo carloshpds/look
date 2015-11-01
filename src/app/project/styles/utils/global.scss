@@ -1,0 +1,134 @@
+.icon-angular-logo {
+  background: url('../assets/images/angular.png');
+  background-size: cover;
+  height: 96px;
+  width: 96px;
+}
+
+.actions-wrapper {
+  clear: both;
+  padding: 15px 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+
+  .icon {
+    margin-right: 14px;
+  }
+}
+
+label:first-letter{
+  text-transform: capitalize;
+}
+
+
+.crud-view {
+  position: relative;
+  width: 100%;
+  padding: 40px 55px;
+  min-height: 90%;
+
+  .actions-wrapper {
+    a {
+      font-size: 15px;
+      font-weight: 300;
+
+      .icon {
+        margin-right: 3px;
+      }
+    }
+  }
+
+  .btn-remove {
+    margin-top: 50px;
+  }
+
+  .form-view {
+    form, [ng-form] {
+      margin-top: 25px;
+      padding-left: 8px;
+    }
+
+    input, .ui-select-container {
+      max-width: 540px;
+      border-radius: 3px;
+    }
+
+    .ui-select-toggle {
+      border-radius: 3px;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+
+      p.control-label {
+        font-weight: 500;
+        margin-bottom: 11px;
+        font-size: 14px;
+      }
+    }
+
+    .btn {
+      font-size: 17px;
+      font-weight: 300;
+
+      &.cancel {
+        padding-left: 51px;
+        padding-right: 51px;
+      }
+
+      &.submit {
+        padding-left: 59px;
+        padding-right: 59px;
+      }
+
+
+    }
+
+
+
+    .edit-form-field {
+      padding-left: 0;
+    }
+
+    .sub-action {
+      font-size: 13px;
+      text-decoration: none;
+      cursor: pointer;
+      margin-left: 8px;
+      line-height: 34px;
+
+      span.text {
+        text-decoration: underline;
+      }
+
+      &.cancel {
+        color: $mid-text-color;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+        color: $light-text-color;
+      }
+    }
+
+    .static-field {
+      p {
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+    }
+
+    .checkbox-right {
+      input[type="checkbox"] {
+        margin-left: 8px;
+      }
+    }
+  }
+}

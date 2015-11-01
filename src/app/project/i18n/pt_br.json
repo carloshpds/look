@@ -1,0 +1,39 @@
+{
+  "GENERAL" : {
+    "NEW" : "Novo",
+    "WHEN" : "Quando",
+    "HOME" : "Home",
+
+    "PLACEHOLDERS": {
+      "SELECT": "Selecione..."
+    },
+
+    "BOOLEAN": {
+      "TRUE": "Sim",
+      "True" : "@:GENERAL.BOOLEAN.TRUE",
+      "true" : "@:GENERAL.BOOLEAN.TRUE",
+      "FALSE": "Não",
+      "False" : "@:GENERAL.BOOLEAN.FALSE",
+      "false" : "@:GENERAL.BOOLEAN.FALSE"
+    },
+
+    "NAME"             : "Nome",
+    "REQUIRED"         : "Obrigatório",
+    "PLEASE_TRY_AGAIN" : "por favor tente novamente.",
+    "CLICK_HERE"       : "Clique aqui",
+    "TO_ADD_NEW"       : "para adicionar {gender, select, he{um novo} she{uma nova} other{um novo}}",
+
+    "ITEM" : "Item"
+  },
+
+  "ACTIONS": {
+    "SEARCH" : "Buscar",
+    "DELETE" : "Remover",
+    "REMOVE" : "@:ACTIONS.DELETE",
+    "ADD" : "Adicionar",
+    "SAVE": "Salvar",
+    "CANCEL": "Cancelar",
+    "EDIT" : "Editar",
+    "FINISH_EDIT" : "Concluir edição"
+  }
+}
