@@ -1,7 +1,8 @@
 <div class="container-fluid no-padding">
 
   <div class="">
-    <button class="btn btn-primary" ng-click="actions.getWebcam()">Get</button>
+    <button class="btn btn-primary" ng-click="actions.getWebcam()" ng-if="!attrs.videoStream">Get</button>
+    <button class="btn btn-danger" ng-click="actions.stopWebcam()" ng-if="attrs.videoStream">Stop</button>
     <div lk-video-stream stream="attrs.videoStream" ng-show="attrs.videoStream != null"></div>
   </div>
 </div>

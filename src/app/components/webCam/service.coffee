@@ -7,6 +7,7 @@ angular.module 'ngLook.services'
 
     service =
       defer : null
+      videoStream: null
 
     alerts =
       info: ->
@@ -40,11 +41,17 @@ angular.module 'ngLook.services'
 
       openWebCam: (videoStream) ->
         hAlert.close()
+        service.videoStream = videoStream
         return service.defer.resolve(videoStream)
 
 
       rejectedCamera : (data)->
         alerts.error()
+        service.defer.reject(data)
+
+      stop: (videoStream = service.videoStream) ->
+        videoStream.active = no
+        videoStream.getVideoTracks()[0]?.stop()
 
       get: () ->
         service.defer = $q.defer()

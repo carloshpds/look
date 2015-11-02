@@ -18,6 +18,10 @@ angular.module "ngLook.controllers"
         webcamService.get().then (videoStream)->
           $scope.attrs.videoStream = videoStream
 
+      stopWebcam: ->
+        webcamService.stop()
+        $scope.attrs.videoStream = null
+
 
 
 

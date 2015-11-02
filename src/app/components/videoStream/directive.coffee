@@ -13,7 +13,7 @@ angular.module "ngLook.directives"
     controller: 'lkVideoStreamController'
     template  : """
       <div class="text-center">
-        <canvas id="canvasPicture" ng-show="false"></canvas>
-        <video class="videoStream">Vídeo não está disponível</video>
+        <canvas id="canvasPicture"></canvas>
+        <video class="videoStream" preload autoplay loop muted>Vídeo não está disponível</video>
       </div>
     """

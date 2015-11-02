@@ -10,7 +10,7 @@ angular.module "ngLook.controllers"
     # =============================================
     $scope.options =
       videoHeight     : 600
-      videoWidth      : 800
+      videoWidth      : 400
 
     videoElement  = $element.find('.videoStream')[0]
     canvasElement = $element.find('#canvasPicture')[0]
@@ -51,28 +51,29 @@ angular.module "ngLook.controllers"
           canvasElement.setAttribute('height', height)
 
           streaming = yes
-          # $scope.actions.track()
+
 
       track: ->
-        tracker = new tracking.ObjectTracker('face')
+        tracker = new tracking.ObjectTracker(['eye'])
 
         tracker.setInitialScale(4)
         tracker.setStepSize(2)
         tracker.setEdgesDensity(0.1)
 
-        tracking.track('.videoStream', tracker, { camera: true })
-
         tracker.on 'track', (event) ->
-          # context.clearRect(0, 0, canvasElement.width, canvasElement.height)
+          context.clearRect(0, 0, canvasElement.width, canvasElement.height)
 
-          event.data.forEach (rect) ->
+          for rect in event.data
             context.strokeStyle = '#a64ceb'
             context.strokeRect(rect.x, rect.y, rect.width, rect.height)
             context.font = '11px Helvetica'
-            context.fillStyle = "#fff"
+            context.fillStyle = "#000000"
             context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11)
             context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22)
 
+          return
+
+        tracking.track('.videoStream', tracker, { camera: yes })
 
 
 
@@ -92,4 +93,5 @@ angular.module "ngLook.controllers"
           vendorURL        = window.URL or window.webkitURL
           videoElement.src = vendorURL.createObjectURL($scope.stream)
 
-        videoElement.play()
+        # videoElement.play()
+        $scope.actions.track()
